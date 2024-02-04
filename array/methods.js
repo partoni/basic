@@ -26,5 +26,14 @@ let users = [
   users.filter((item,index,array)=>item.id==2) // [{id: 2, name: "Петя"},{id: 2, name: "Леша"}]
 
   let users2 = users.map((item,index,array)=>{item.id==2?'yes':'no'}) //new array ['no', 'yes','no', 'yes']
-  arr.sort()
+  arr.sort( (a, b) => a - b ) // now arr = [1,2,3,3,4,5]
+  let lettersArray = ['c','d','b','a']
+  lettersArray.sort( (a, b) => a.localeCompare(b) ) // for letters now lettersArray = [a,b,c,d]
 
+  arr.reverse()
+  let strArr = arr.join('!') // '1!2!3!3!4!5'
+  let arr3 = strArr.split('!') //  [1,2,3,3,4,5]
+
+  let sum = arr.reduce(function(accumulator, item, index, array) {
+    accumulator+item
+  },0) // return sum items equelig 18
