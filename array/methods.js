@@ -31,9 +31,23 @@ let users = [
   lettersArray.sort( (a, b) => a.localeCompare(b) ) // for letters now lettersArray = [a,b,c,d]
 
   arr.reverse()
+  let newArr3 = arr.toReversed()
   let strArr = arr.join('!') // '1!2!3!3!4!5'
   let arr3 = strArr.split('!') //  [1,2,3,3,4,5]
 
   let sum = arr.reduce(function(accumulator, item, index, array) {
     accumulator+item
   },0) // return sum items equelig 18
+
+  Array.isArray(arr)
+  const passed = arr.every(n => n > 2); //false проверяет все элементы
+  const passed2 = numbers.some(n => n > 3);  // true  хотя бы один
+
+  const people = ["Tom", "Bob", ["Alice", "Kate", ["Sam", "Ann"]]];
+  const flattenPeople = people.flat(2);// ["Tom", "Bob", "Alice", "Kate", "Sam", "Ann"]
+  people.flat(Infinity) // любая вложенность
+
+  const people2 = ["Tom", "Bob", "Sam"];
+const modified = people2.with(0, "Tomas");   // изменяем "Tom" на "Tomas"
+console.log(people2)   // ["Tom", "Bob", "Sam"] - начальный массив не изменился
+console.log(modified);  // ["Tomas", "Bob", "Sam"] - изменилась копия
