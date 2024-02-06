@@ -13,3 +13,10 @@ str.trim() // remove spaces
  console.log(str.match(/i/)); //[ 'i', index: 13, input: 'My second string', groups: undefined ]
  console.log(str.match(/i/g)); //[i]
 
+//Regex
+
+let regex = /example/
+/example/i  // независимо от регистра
+/example/g  // все совпадения
+/example/g  // все совпадения
+/example/g  // все совпадения
