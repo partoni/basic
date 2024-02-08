@@ -15,3 +15,22 @@ Object.fromEntries(arrayFromObject)  // make object
 
 // loop throuпр
 for(let i in obj){}
+
+
+//descriptor
+
+let descriptorName = Object.getOwnPropertyDescriptor(obj,'name')
+//     {"value": "Vova",
+//     "writable": true,
+//     "enumerable": true,
+//     "configurable": true
+//   }
+
+Object.defineProperty(obj, "job", {
+    value: "driver"
+  });  //create new property
+//     {"value": "driver",
+//     "writable": false,
+//     "enumerable": false,
+//     "configurable": false
+//   }
