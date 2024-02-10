@@ -34,3 +34,13 @@ Object.defineProperty(obj, "job", {
 //     "enumerable": false,
 //     "configurable": false
 //   }
+
+new.target //вызывается внутри функции для проверки вызывалассь ли она в качестве функции-конструктора.
+let c = {name:'Common'}
+function A() { return c }
+function B() { return c }
+// if return not object then return will be ignored.
+let a = new A();
+let b = new B();
+
+alert( a == b ); // true
