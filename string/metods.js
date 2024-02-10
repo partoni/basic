@@ -20,3 +20,5 @@ let regex = /example/
 /example/g  // все совпадения
 /example/g  // все совпадения
 /example/g  // все совпадения
+
+for(let i of str){} // for loop through
