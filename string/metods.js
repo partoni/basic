@@ -18,7 +18,6 @@ str.trim() // remove spaces
 let regex = /example/
 /example/i  // независимо от регистра
 /example/g  // все совпадения
-/example/g  // все совпадения
-/example/g  // все совпадения
+
 
 for(let i of str){} // for loop through
