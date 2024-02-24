@@ -9,7 +9,11 @@ function sayHi() {
     alert( "Привет" );
   }
 // Fanction Expression
-let  sayHi = function() {
+let  sayHi2 = function() {
+    alert( "Привет" );
+  }
+  //arrow function
+  let sayHi3 = ()=>{
     alert( "Привет" );
   }
   
