@@ -37,3 +37,23 @@ function pow(x, n) {
   count() // 2
   //but we can:
   console.log(count.count) 
+
+//decorator
+// кэшируем результат для быстрой рапботы
+function f1(a){
+    return a+3
+}
+
+function dec(f){
+    let cashe = new Map()
+
+    
+    return function(x){
+        if(cashe.has(x)){
+            return cashe.get(x)
+        }
+        let result = f(x)
+        cashe.set(x,result)
+        return result
+    }
+}
