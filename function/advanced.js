@@ -21,3 +21,19 @@ function pow(x, n) {
   alert( counter() ); // 0
   alert( counter() ); // 1
   alert( counter() ); // 2
+
+  // пользовательские св-ва
+  function makeCounter() {
+    
+  
+     function countFun() {
+      countFun.count++; // есть доступ к внешней переменной "count"
+    };
+    countFun.count=0
+    return countFun
+  }
+  let count = makeCounter()
+  count() // 1
+  count() // 2
+  //but we can:
+  console.log(count.count) 
