@@ -57,3 +57,44 @@ function dec(f){
         return result
     }
 }
+f1 = dec(f1)
+// call apply
+//decorator above won"t function with method of object 
+//for that we can use call and apply
+
+let f2 = {
+    age:10,
+    slow(a){
+        return a+this.age
+    }
+}
+
+function dec2(f){
+    let cashe = new Map()
+
+    
+    return function(x){
+        if(cashe.has(x)){
+            return cashe.get(x)
+        }
+        //let result = f(x)  this way won't  work
+        let result = f.call(this,x)
+        // if "slow" would have few arguments
+        //let result = f.call(this,...arguments)
+        //or
+        //let result = f.apply(this,arguments)
+        // arguments - псевдомассив
+        cashe.set(x,result)
+        return result
+    }
+}
+// заимствование метода
+
+function f3(){
+    return [].join.call(arguments)
+}
+// заставляем join отработать в котексте arguments
+
+f3(3,6)  //"3,5"
+
+
