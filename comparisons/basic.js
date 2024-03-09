@@ -38,3 +38,22 @@ Number(NAN)// error
 //boolen
 
 Boolean(0)//as well '',null,undefined, NaN becomes false
+
+
+//   || converts to boolen and returns original value,but if all oprands converts to false returns last
+
+let c = NaN || null || 0 || '' // c==''
+
+//  && returns first false or if all truthy returns last
+let d = NaN && null && 0 && '' //d==NaN
+let f = 1 && 'hhg' && {} && '00' //f=='00'
+
+a||=b  // equivalent a||(a=b)
+a&&=b //equivalent a&&(a=b)
+
+//  ?? return first operand is not equal null or undefined
+let g = 0??null // g==0
+// there is ??=
+
+
+
